@@ -1,0 +1,12 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+Perfil - {{ usuario }}
+{% endblock %}
+
+{% block body %}
+<body>
+    <h1 style = "background-color:tomato; font-family:verdana;">Pagina de Perfil do {{ usuario }} no Pinterest Treino</h1>
+    <a href = "{{ url_for('homepage') }}">Sair</a>
+</body>
+{% endblock %}
