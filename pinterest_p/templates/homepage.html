@@ -11,6 +11,21 @@
     {% block body%}
     <body>
         <h1 style = "color:blue; font-family:verdana;">Pinterest Treino - site feito em Flask</h1>
+
+    {% block formulario %}
+    <form method = "POST">
+    {{ form.csrf_token }}
+
+    {{ form.email.label() }}
+    {{ form.email() }}
+        
+    {{ form.senha.label() }}
+    {{ form.senha() }}
+
+    {{ form.botao_confirmacao() }}
+
+    </form>
+    {% endblock %}
     </body>
     {% endblock %}
 </html>
