@@ -11,6 +11,7 @@ senha = os.getenv("SENHA")
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///master.db"
 app.config["SECRET_KEY"] = senha
+app.config["UPLOAD_FOLDER"] = "static/fotos_posts"
 
 database = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
